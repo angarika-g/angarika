@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Am Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+        .fact-container {
+            padding: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff5f8;
+        }
+        button {
+            padding: 12px 24px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 I Am Facts Generator 📚</h1>
+    <div class="fact-container">
+        <p id="fact">Click the button to learn about me!</p>
+    </div>
+    <button onclick="showFact()">Show Me a Fact!</button>
+
+    <script>
+        const facts = [
+            "I am an artist who loves creating live paintings at music festivals!",
+            "I am always surrounded by pink - it's my favorite color for creating a calm workspace!",
+            "I am a bookworm who reads at least one book every week!",
+            "I am constantly sketching in my art journal while traveling to different art festivals!",
+            "I am collecting pink art supplies because they inspire my creativity!",
+            "I am always planning my next festival visit where I can combine art and music!"
+        ];
+
+        function showFact() {
+            const factElement = document.getElementById('fact');
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            factElement.textContent = randomFact;
+        }
+    </script>
+</body>
+</html>
